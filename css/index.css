@@ -1,0 +1,27 @@
+.setting {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.setting input {
+	vertical-align: middle; 
+}
+
+.setting input[type=text] {
+	width: 30px;
+}
+
+#grimes-slimes {
+	vertical-align: top;
+}
+
+.primes {
+	vertical-align: top;
+	display: inline-block;
+	width: 200px;
+}
+
+/*.setting label {
+	display: inline-block;
+	min-width: 100px;
+}*/

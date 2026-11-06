@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Consecuprimes</title>
+		<script type='module' src='js/index.js'></script>
+		<link rel='stylesheet' href='css/index.css'>
+	</head>
+	<body>
+		<p>Calculating primes up to <span id='primes-limit-span'></span>. 
+		This should take several seconds.
+		<span id='primes-status-span'>Calculating...</span></p>
+		<div class='setting'>
+			<label for='base'>Base:</label>
+			<input type='range' id='base-range' name='base-range' min='2' max='100' value='100'>
+			<input type='text' id='base-text' name='base-text' value='10'>
+		</div>
+		<div class='setting'>
+			<label for='inc'>Increment:</label>
+			<input type='range' id='inc-range' name='inc-range' min='1' max='10' value='1'>
+			<input type='text' id='inc-text' name='inc-text' value='1'>
+		</div>
+		<div class='setting'>
+			<label for='num'>Number:</label>
+			<input type='range' id='num-range' name='num-range' min='2' max='4' value='2'>
+			<input type='text' id='num-text' name='num-text' value='2'>
+		</div>
+		<p>Digits (in their base) are separated by spaces. The decimal value is given in parentheses.</p>
+		<div id='grimes-slimes'>
+			<div id='grimes' class='primes'>
+				<h2>Grimes</h2>
+				<div class='primes-cont'></div>
+			</div>
+			<div id='slimes' class='primes'>
+				<h2>Slimes</h2>
+				<div class='primes-cont'></div>
+			</div>
+		</div>
+	</body>
+</html>
