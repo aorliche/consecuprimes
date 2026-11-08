@@ -37,6 +37,15 @@ function addInpEventListeners(range, text, changeCb) {
 	});
 }
 
+function hunimalDigitStr(n) {
+	if (n >= 100) {
+		return hunimalDigitStr(Math.floor(n/100)) + hunimalDigitStr(n%100);
+	}
+	const tens = Math.floor(n/10);
+	const ones = n%10;
+	return String.fromCharCode(0x5500 + 0x10*tens + ones);
+}
+
 window.addEventListener('load', () => {
 	let primes;
 
@@ -72,7 +81,11 @@ window.addEventListener('load', () => {
 			vals.reverse();
 			let valStr = '';
 			for (let j=0; j<num; j++) {
-				valStr += ' ' + vals[j].toString();
+				if (base > 10) {
+					valStr += ' ' + hunimalDigitStr(vals[j]);
+				} else {
+					valStr += ' ' + vals[j].toString();
+				}
 			}
 			valStr += ` (${val})`;
 			const div = document.createElement('div');
